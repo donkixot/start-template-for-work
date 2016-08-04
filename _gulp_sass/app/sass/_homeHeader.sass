@@ -1,0 +1,555 @@
+.homeFs_item_sfirst,
+.homeFs_item_ssecond,
+.homeFs_item_sthird,
+.homeFs_item_sfourth,
+.homeFs_item_sfifth,
+.homeFs_item_ssixth,
+.homeFs_item_sseventh
+	position: relative
+	width: 14.28%
+	float: left
+	height: 100vh
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	.full_size
+		width: 100%
+		position: absolute
+		left: 0
+		top: 0
+
+.homeFs_item_sfirst
+	background-color: #3c3c3c
+.homeFs_item_ssecond
+	background-image: url(../images/homefs_item2.jpg)
+.homeFs_item_sthird
+	background-image: url(../images/homefs_item3.jpg)
+.homeFs_item_sfourth
+	background-image: url(../images/homefs_item4.jpg)
+.homeFs_item_sfifth
+	background-image: url(../images/homefs_item5.jpg)
+.homeFs_item_ssixth
+	overflow: visible
+	background-image: url(../images/homefs_item6.jpg)
+.homeFs_item_ssixth_inner
+	overflow: hidden
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+
+.homeFs_item_sseventh
+	background-image: url(../images/homefs_item7.jpg)
+	.homeCategory_item
+		&:after
+			content: ''
+			width: 86px
+			height: 43px
+			position: absolute
+			top: -19px
+			right: 0
+			background-image: url(../images/itembg.jpg)
+			background-repeat: no-repeat
+
+.homeFs_lang
+	@extend %ulli
+	ul
+		text-align: center
+		padding-top: 35px
+		li
+			display: inline-block
+			padding: 0 9px
+			&:first-child
+				padding-left: 0
+			&:last-child
+				padding-right: 0
+			a
+				color: #de8900
+				text-transform: uppercase
+				text-decoration: none
+				font-family: "MyriadPro-Regular"
+				font-size: 14px
+				&:hover
+					color: #767676
+		.active
+			a
+				color: #767676
+
+.homeFs_menu
+	padding-top: 50px
+	@extend %ulli
+	ul
+		text-align: center
+		li
+			margin: 10px 0
+			&:before
+				display: block
+				opacity: 0
+				transition: all 0.3s ease
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 40px
+				height: 100%
+				background-color: #de8900
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+			a
+				text-transform: uppercase
+				text-decoration: none
+				color: #fff
+				font-family: "MyriadPro-Regular"
+				font-size: 14px
+				transition: all .3s ease
+				&:hover
+					color: #767676
+			&:hover
+				&:before
+					opacity: 1
+			&.current-menu-item
+				&:before
+					opacity: 1
+				a
+					color: #767676
+
+.homeCategory_item
+	padding: 36px 0 0
+	text-align: center
+	height: 140px
+	width: 100%
+	position: absolute
+	bottom: 18%
+	background-color: #fff
+	z-index: 5
+	&:before
+		content: ''
+		height: 20px
+		width: 64%
+		position: absolute
+		left: -64%
+		top: -20px
+		background-color: #de8900
+		opacity: 0
+		transition: all .5s ease
+.homeFs_item_sfirst_logo
+	padding-top: 12px
+
+.homeCategory_item_inner
+	height: 100%
+	width: 124px
+	margin: 0 auto
+	z-index: 5
+	a
+		color: #000
+		text-transform: uppercase
+		text-decoration: none
+		font-size: 18px
+		font-family: "MyriadPro-Semibold"
+		transition: all .3s ease
+		&:hover
+			color: #317331
+	span
+		display: block
+
+.homeCategory_item_mnulist
+	opacity: 0
+	position: absolute
+	bottom: 195px
+	transition: all .4s ease
+	z-index: 3
+	width: 100%
+	@extend %pgct
+	@extend %ulli
+	ul
+		li
+			margin: 6px 0
+			transition: all .3s ease
+			transform: translate(0, 195px)
+			transition-delay: .1s
+			a
+				font-family: "MyriadPro-Regular"
+				font-size: 14px
+				color: rgba(255,255,255,.75)
+				text-transform: uppercase
+				text-decoration: none
+				transition: all .3s ease
+				&:hover
+					color: #fff
+.homeFs_item_ssecond,
+.homeFs_item_sthird,
+.homeFs_item_sfourth,
+.homeFs_item_sfifth,
+.homeFs_item_ssixth,
+.homeFs_item_sseventh
+	&:before
+		content: ''
+		height: 100%
+		width: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background-color: rgba(30,103,111,.88)
+		opacity: 0
+		transition: all .5s ease
+		z-index: 1
+	&:hover
+		&:before
+			opacity: 1
+		.homeCategory_item
+			&:before
+				opacity: 1
+				left: 0
+		.homeCategory_item_mnulist
+			opacity: 1
+			// bottom: 195px
+		.homeCategory_item_mnulist.active
+			opacity: 1
+			ul
+				li
+					transition: all .3s ease
+					transform: translate(0, 0)
+					&:nth-child(1)
+						transition-delay: .1s
+					&:nth-child(2)
+						transition-delay: .2s
+					&:nth-child(3)
+						transition-delay: .3s
+					&:nth-child(4)
+						transition-delay: .4s
+					&:nth-child(5)
+						transition-delay: .5s
+					&:nth-child(6)
+						transition-delay: .6s
+					&:nth-child(7)
+						transition-delay: .7s
+					&:nth-child(8)
+						transition-delay: .8s
+					&:nth-child(9)
+						transition-delay: .9s
+					&:nth-child(10)
+						transition-delay: 1s
+.homeFs_item_ssixth
+	&:after
+		content: ''
+		background-color: #b33f6e
+		height: 45px
+		width: 100%
+		position: absolute
+		bottom: -45px
+		left: 0
+		z-index: 2
+
+.homeFs_item_ssixth_bottom
+	background-color: #b33f6e
+	height: 45px
+	width: 100%
+	position: absolute
+	bottom: -45px
+	left: 0
+	z-index: 2
+
+
+
+//////////////////////
+//start mob first screen
+//////////////////////
+.homeFs_mob
+	display: none
+.homeFs_mob_item
+	min-height: 100px
+	position: relative
+	&:nth-child(1),
+	&:nth-child(7)
+		.homeFs_mob_item_center
+			background-color: #b33f6e
+		.homeFs_mob_item_category
+			background-color: #b33f6e
+	&:nth-child(2),
+	&:nth-child(8)
+		.homeFs_mob_item_center
+			background-color: #de8900
+		.homeFs_mob_item_category
+			background-color: #de8900
+	&:nth-child(3),
+	&:nth-child(9)
+		.homeFs_mob_item_center
+			background-color: #4e979f
+		.homeFs_mob_item_category
+			background-color: #4e979f
+	&:nth-child(4),
+	&:nth-child(10)
+		.homeFs_mob_item_center
+			background-color: #00693f
+		.homeFs_mob_item_category
+			background-color: #00693f
+	&:nth-child(5),
+	&:nth-child(11)
+		.homeFs_mob_item_center
+			background-color: #568b76
+		.homeFs_mob_item_category
+			background-color: #568b76
+	&:nth-child(6),
+	&:nth-child(12)
+		.homeFs_mob_item_center
+			background-color: #e36847
+		.homeFs_mob_item_category
+			background-color: #e36847
+
+.homeFs_mob_item_left,
+.homeFs_mob_item_right
+	float: left
+	width: 50%
+	height: 100px
+
+.homeFs_mob_item_left
+	background-color: #fff
+	padding: 25px 25px 0
+	a
+		color: #000
+		text-transform: uppercase
+		text-decoration: none
+		font-size: 18px
+		font-family: "MyriadPro-Semibold"
+		transition: all .3s ease
+		&:hover
+			color: #317331
+	span
+		display: block
+
+.homeFs_mob_item_center
+	width: 40px
+	height: 100px
+	position: absolute
+	left: 50%
+	top: 0
+	transform: translate(-50%, 0)
+	z-index: 3
+.homeFs_mob_item_arr
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	// transition: all .3s ease
+	width: 0
+	height: 0
+	border-left: 5px solid transparent
+	border-right: 5px solid transparent
+	border-top: 9px solid #fff
+.homeFs_mob_item_center.active
+	.homeFs_mob_item_arr
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
+		border-bottom: 9px solid #fff
+		border-top: 0
+.homeFs_mob_item_category
+	display: none
+	@extend %ulli
+	text-align: center
+	ul
+		padding: 20px 0
+		li
+			margin: 12px 0
+			transform: translate(0px, 100px)
+			transition: all .3s ease
+			transition-delay: .1s
+			a
+				color: rgba(255,255,255,0.75)
+				font-size: 14px
+				font-family: "MyriadPro-Regular"
+				text-transform: uppercase
+				text-decoration: none
+
+.homeFs_mob_item_category.open
+	ul
+		li
+			transform: translate(0, 0)
+			&:nth-child(1)
+				transition-delay: .1s
+			&:nth-child(2)
+				transition-delay: .2s
+			&:nth-child(3)
+				transition-delay: .3s
+			&:nth-child(4)
+				transition-delay: .4s
+			&:nth-child(5)
+				transition-delay: .5s
+			&:nth-child(6)
+				transition-delay: .6s
+			&:nth-child(7)
+				transition-delay: .7s
+			&:nth-child(8)
+				transition-delay: .8s
+			&:nth-child(9)
+				transition-delay: .9s
+			&:nth-child(10)
+				transition-delay: 1s
+
+.homeFs_mob_item_right
+	overflow: hidden
+	img
+		width: 100%
+//////////////////////////
+//end mob first screen
+//////////////////////////
+
+
+
+
+//////////////////////
+//start mobile header
+//////////////////////
+.header_mob
+	display: none
+.header_mob_logo
+	position: relative
+	background-color: #ececec
+	height: 75px
+	text-align: center
+	padding-top: 17px
+	&:before
+		content: ''
+		width: 86px
+		height: 31px
+		position: absolute
+		right: 0
+		top: 0
+		background-image: url(../images/moblogobg.jpg)
+		background-repeat: no-repeat
+
+.header_mob_menu_wrapper
+	min-height: 50px
+	background-color: #3c3c3c
+
+.header_mob_menu_wrap
+	float: left
+	width: 100%
+
+.header_mob_menu_toggle
+	width: 72px
+	height: 50px
+	padding: 13px 0 0 20px
+	cursor: pointer
+	transition: all .3s ease
+	span
+		width: 30px
+		height: 5px
+		background-color: #839098
+		display: block
+		position: relative
+		transition: all .3s ease
+		transition-delay: 0.3s
+		&:before,
+		&:after
+			content: ''
+			width: 30px
+			height: 5px
+			position: absolute
+			left: 0
+			top: 10px
+			background-color: #839098
+			transition: all .3s ease
+			transition-delay: 0.2s
+		&:after
+			transition-delay: 0.1s
+			top: 20px
+	&.active
+		background-color: #de8900
+		span
+			transition-delay: 0.1s
+			background-color: #fff
+			&:before,
+			&:after
+				background-color: #fff
+			&:after
+				transition-delay: 0.3s
+.header_mob_menu
+	display: none
+	padding: 20px 0 35px
+	text-align: center
+	@extend %ulli
+	ul
+		li
+			margin: 19px 0
+			transform: translate(0, 60px)
+			transition-delay: .1s
+			transition: all .3s ease
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+			a
+				text-transform: uppercase
+				text-decoration: none
+				color: #fff
+				font-family: "MyriadPro-Regular"
+				font-size: 18px
+				transition: all .3s ease
+				&:hover
+					color: #767676
+			&.current-menu-item
+				a
+					color: #767676
+.header_mob_menu.open
+	ul
+		li
+			transition: all .3s ease
+			transform: translate(0, 0)
+			&:nth-child(1)
+				transition-delay: .1s
+			&:nth-child(2)
+				transition-delay: .2s
+			&:nth-child(3)
+				transition-delay: .3s
+			&:nth-child(4)
+				transition-delay: .4s
+			&:nth-child(5)
+				transition-delay: .5s
+			&:nth-child(6)
+				transition-delay: .6s
+			&:nth-child(7)
+				transition-delay: .7s
+			&:nth-child(8)
+				transition-delay: .8s
+			&:nth-child(9)
+				transition-delay: .9s
+			&:nth-child(10)
+				transition-delay: 1s
+.header_mob_lang
+	position: absolute
+	right: 20px
+	@extend %ulli
+	ul
+		padding-top: 15px
+		li
+			display: inline-block
+			padding: 0 12px
+			&:first-child
+				padding-left: 0
+			&:last-child
+				padding-right: 0
+			a
+				color: #de8900
+				text-transform: uppercase
+				text-decoration: none
+				font-family: "MyriadPro-Regular"
+				font-size: 14px
+				&:hover
+					color: #767676
+		.active
+			a
+				color: #767676
+
+.header_mob_menu_wrapper.fixed
+	width: 100%
+	position: fixed
+	top: 0
+	z-index: 50
+.headLogoFixed
+	margin-bottom: 50px
+//////////////////////
+//end mobile header
+//////////////////////

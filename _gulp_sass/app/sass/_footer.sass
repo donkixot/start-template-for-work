@@ -1,0 +1,56 @@
+.mainFooter
+	padding: 25px 30px 0
+	height: 95px
+	background-color: #3c3c3c
+	width: 100%
+	position: absolute
+	bottom: 0
+.mainFooter_left
+	float: left
+	span
+		color: #9d9d9d
+		display: block
+		margin-bottom: 5px
+	a
+		color: #9d9d9d
+		text-decoration: none
+		vertical-align: middle
+		&:hover
+			color: #fff
+			text-decoration: underline
+.sitedev
+	width: 29px
+	height: 16px
+	display: inline-block
+	background-image: url(../images/wwlogo.png)
+	vertical-align: middle
+	&:hover
+		text-decoration: none
+		background-image: url(../images/wwlogo_h.png)
+
+.mainFooter_menu
+	float: right
+	@extend %ulli
+	ul
+		li
+			float: left
+			margin: 0 20px
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
+			a
+				color: #9d9d9d
+				font-size: 14px
+				font-family: "MyriadPro-Regular"
+				text-decoration: none
+				text-transform: uppercase
+				transition: all .3s ease
+				&:hover
+					color: #fff
+			&.current-menu-item
+				a
+					color: #fff
+
+
+

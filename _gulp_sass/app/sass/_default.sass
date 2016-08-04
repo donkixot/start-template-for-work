@@ -1,0 +1,199 @@
+@import "bootstrapReset.sass"
+@import "defaultWP.sass"
+@import "animation.sass"
+
+-webkit-appearance
+	none
+
+*::-webkit-input-placeholder
+	color: #5c5c5c
+	opacity: 1
+
+*:-moz-placeholder
+	color: #5c5c5c
+	opacity: 1
+
+*::-moz-placeholder
+	color: #5c5c5c
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #5c5c5c
+	opacity: 1
+
+textarea,
+input
+	&::-webkit-input-placeholder,
+	&::-moz-placeholder,
+	&:-moz-placeholder,
+	&:-ms-input-placeholder
+		color:#5c5c5c
+		opacity: 1
+
+textarea:focus,
+input:focus
+	outline: none
+	&::-webkit-input-placeholder,
+	&::-moz-placeholder,
+	&:-moz-placeholder,
+	&:-ms-input-placeholder
+		opacity: 0
+
+input
+	border-radius: 0
+
+
+//// // default color for numbers in iOS
+//// a[href^=tel]
+//// 	color: #515151
+//// 	text-decoration: none
+
+a:focus
+	outline: none
+
+
+body
+	font-size: 14px
+	position: relative
+	line-height: 1.3
+	font-family: Arial, sans-serif
+	overflow-x: hidden
+	color: #5e5e5e
+	background-color: #ececec
+
+
+.hidden
+	display: none
+
+
+
+h1
+	font-family: "MyriadPro-Semibold"
+	font-size: 45px
+	text-transform: uppercase
+	line-height: 1
+	color: #000
+h2
+	font-size: 35px
+	text-transform: uppercase
+	font-family: "MyriadPro-Semibold"
+	line-height: 1
+	color: #000
+h3
+	font-size: 24px
+	font-family: "MyriadPro-Semibold"
+	color: #000
+h4
+	font-size: 18px
+	font-family: "MyriadPro-Semibold"
+	color: #000
+
+ul
+	list-style-type: none
+	padding-left: 13px
+	li
+		margin: 5px 0
+		padding-left: 17px
+		position: relative
+		&:before
+			content: ''
+			width: 8px
+			height: 8px
+			position: absolute
+			left: 0
+			top: 5px
+			background-color: #de8900
+
+ol
+	counter-reset: li
+	margin-left: 0
+	padding-left: 0
+	margin-bottom: 15px
+	padding-left: 0
+	> li
+		position: relative
+		list-style: decimal
+		counter-increment: li
+		margin-bottom: 12px
+		list-style: none
+		padding-left: 25px
+		&:before
+			content: counter(li)
+			position: absolute
+			top: 3px
+			left: 2px
+			width: 23px
+			height: 21px
+			font-size: 18px
+			background: #fff
+			line-height: 1
+			color: #FE7B15
+			font-family: Arial
+			text-align: left
+	ol
+		padding-top: 15px
+		margin-bottom: 6px
+		margin-left: 22px
+		> li:before
+			font-size: 14px
+			color: #838383
+			font-family: Arial
+	ul
+		padding-top: 15px
+		margin-bottom: 10px
+		li
+			&:before
+				content: ""
+			&:last-child
+				margin-bottom: 0
+
+a
+	color: #317331
+	&:hover
+		text-decoration: none
+
+table
+	width: 100%
+	td
+		height: 30px
+		padding: 0 15px
+		border: 1px solid #c9c9c9
+		&:nth-child(2)
+			text-align: center
+		&:last-child
+			text-align: right
+	tr:first-child
+		background-color: #fff
+		td
+			color: #000
+			text-align: left
+			p,
+			span
+				color: #000
+
+%ulli
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			margin: 0
+			padding: 0
+			&:before,
+			&:after
+				display: none
+
+.btn_wrap
+	text-align: center
+	margin: 5px 0
+	a
+		padding: 5px
+		text-decoration: none
+
+%pgmd
+	top: 50%
+	transform: translate(0, -50%)
+
+%pgct
+	left: 50%
+	transform: translate(-50%, 0)

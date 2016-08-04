@@ -1,0 +1,259 @@
+@import "fonts.sass"
+@import "default.sass"
+@import "homeHeader.sass"
+@import "mainHeader.sass"
+@import "footer.sass"
+@import "popup.sass"
+
+body
+	padding-bottom: 95px
+
+
+////////////////////
+//start homepage
+////////////////////
+.homeSection
+	padding: 30px 0 50px 0
+.homeSection_inner
+	width: 1000px
+	margin: 0 auto
+.homeSection_left
+	float: left
+	width: 465px
+	padding: 0 0 0 18px
+.homeSection_left_img
+	width: 391px
+	// height: 344px
+	position: relative
+	&:before
+		content: ''
+		width: 100px
+		height: 166px
+		position: absolute
+		left: -18px
+		bottom: -30px
+		background-color: #317331
+	img
+		width: 391px
+		position: relative
+		z-index: 1
+.homeSection_right
+	float: left
+	width: 535px
+	padding: 40px 50px 0 0
+	h2
+		font-size: 30px
+////////////////////
+//end homepage
+////////////////////
+
+
+
+////////////////////
+//start history
+////////////////////
+.headFixed
+	margin-top: 139px
+.historySection
+	padding: 36px 0
+.category-path
+	@extend %ulli
+	ul
+		&:after
+			display: table
+			clear: both
+			content: ''
+		li
+			float: left
+			color: #5e5e5e
+			padding-right: 26px
+			&:before
+				display: block
+				right: 10px
+				left: auto
+				top: 43%
+				width: 6px
+				height: 3px
+				background-color: #b33f6e
+			&:last-child
+				&:before
+					display: none
+.historySection_inner
+	margin: 0 auto
+	width: 1294px
+	h1
+		margin: 10px 0
+
+.historySection_descr
+	padding: 1px 0 46px
+
+
+.historySection_itemHat
+	background-color: #de8900
+	position: relative
+	&:before
+		content: ''
+		width: 40px
+		height: 75px
+		position: absolute
+		bottom: -75px
+		left: 0
+		background-color: #de8900
+		z-index: 1
+.historySection_itemHat_left,
+.historySection_itemHat_right
+	float: left
+	width: 50%
+	text-align: center
+	h2
+		color: #fff
+		margin: 22px 0 16px
+
+
+
+.historySection_item
+	background-color: #fff
+	margin-bottom: 60px
+	min-height: 257px
+	position: relative
+	&:nth-child(1)
+		.historySection_item_round,
+		.historySection_item_line
+			display: none
+		span
+			background-color: #317331
+	&:nth-child(2),
+	&:nth-child(6),
+	&:nth-child(10)
+		.historySection_item_round,
+		.historySection_item_line
+			background-color: #317331
+		.historySection_item_center
+			span
+				background-color: #de8900
+	&:nth-child(3),
+	&:nth-child(7),
+	&:nth-child(11)
+		.historySection_item_round,
+		.historySection_item_line
+			background-color: #de8900
+		.historySection_item_center
+			span
+				background-color: #4e979f
+	&:nth-child(4),
+	&:nth-child(8),
+	&:nth-child(12)
+		.historySection_item_round,
+		.historySection_item_line
+			background-color: #4e979f
+		.historySection_item_center
+			span
+				background-color: #b33f6e
+	&:nth-child(5),
+	&:nth-child(9),
+	&:nth-child(13),
+		.historySection_item_round,
+		.historySection_item_line
+			background-color: #b33f6e
+		.historySection_item_center
+			span
+				background-color: #317331
+
+.historySection_item_left,
+.historySection_item_center,
+.historySection_item_right
+	float: left
+
+.historySection_item_left,
+.historySection_item_right
+	width: 522px
+	padding: 83px 100px 60px 60px
+.historySection_item_right
+	padding: 83px 60px 60px 60px
+
+.historySection_item_center
+	width: 250px
+	padding-top: 60px
+	position: relative
+	span
+		font-size: 80px
+		font-family: "OpenSans-Semibold"
+		line-height: 1
+		display: block
+		text-align: center
+		color: #fff
+		padding: 26px 0 31px
+
+.historySection_item_line
+	position: absolute
+	top: -114px
+	width: 4px
+	height: 167px
+	left: 50%
+	transform: translate(-50%, 0)
+	background-color: #317331
+.historySection_item_round
+	position: absolute
+	top: -114px
+	left: 50%
+	transform: translate(-50%, 0)
+	width: 12px
+	height: 12px
+	border-radius: 50%
+	background-color: #317331
+
+.historySection_item_mob_wrap
+	display: none
+.historySection_item_mob
+	position: relative
+	padding: 45px 20px 25px
+	background-color: #fff
+	min-height: 325px
+	margin-bottom: 65px
+	&:nth-child(1),
+	&:nth-child(5),
+	&:nth-child(9)
+		.historySection_item_mob_year
+			background-color: #317331
+	&:nth-child(2),
+	&:nth-child(6),
+	&:nth-child(10)
+		.historySection_item_mob_year
+			background-color: #de8900
+	&:nth-child(3),
+	&:nth-child(7),
+	&:nth-child(11)
+		.historySection_item_mob_year
+			background-color: #4e979f
+	&:nth-child(4),
+	&:nth-child(8),
+	&:nth-child(12)
+		.historySection_item_mob_year
+			background-color: #b33f6e
+	&:last-child
+		margin-bottom: 14px
+.historySection_item_mob_year
+	position: absolute
+	left: 20px
+	top: -40px
+	span
+		font-size: 40px
+		font-family: "OpenSans-Semibold"
+		color: #fff
+		line-height: 1
+		display: inline-block
+		padding: 20px
+.hsiMob_title
+	font-size: 18px
+	font-family: "OpenSans-Semibold"
+	color: #de8900
+	text-transform: uppercase
+	margin: 20px 0 13px
+	display: block
+////////////////////
+//end history
+////////////////////
+
+
+//ALWAYS END
+@import "media"

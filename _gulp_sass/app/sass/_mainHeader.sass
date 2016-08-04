@@ -1,0 +1,154 @@
+.mainHeader
+	&:before,
+	&:after
+		content: ''
+		width: 20px
+		height: 139px
+		position: absolute
+		right: 0
+		top: 0
+		background-color: #4e979f
+	&:after
+		width: 158px
+		height: 8px
+
+.mainHeader_top
+	background-color: #fff
+	padding: 0 36px
+	height: 82px
+
+.mainHeader_top_logo
+	float: left
+	padding-top: 22px
+
+.mainHeader_top_menu
+	padding: 29px 0 0
+	float: right
+	@extend %ulli
+	ul
+		li
+			float: left
+			margin: 0 34px
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
+			a
+				font-family: "MyriadPro-Semibold"
+				font-size: 18px
+				color: #000
+				text-decoration: none
+				text-transform: uppercase
+				transition: all .2s ease
+				&:hover
+					color: #317331
+
+
+.mainHeader_bottom
+	padding: 19px 36px
+	background-color: #3c3c3c
+.mainHeader_bottom_lang
+	float: left
+	@extend %ulli
+	ul
+		li
+			display: inline-block
+			margin: 0 10px
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
+			a
+				color: #de8900
+				text-transform: uppercase
+				text-decoration: none
+				font-family: "MyriadPro-Regular"
+				font-size: 14px
+				&:hover
+					color: #767676
+		.active
+			a
+				color: #767676
+
+.mainHeader_bottom_menu
+	float: right
+	@extend %ulli
+	ul
+		li
+			margin: 0 28px
+			float: left
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
+			a
+				text-transform: uppercase
+				text-decoration: none
+				color: #fff
+				font-family: "MyriadPro-Regular"
+				font-size: 14px
+				transition: all .3s ease
+				position: relative
+				&:before
+					// display: none
+					visibility: hidden
+					opacity: 0
+					content: ''
+					height: 10px
+					width: 0
+					position: absolute
+					bottom: -30px
+					left: 58%
+					transform: translate(-50%, 0)
+					background-color: #de8900
+					transition: all .3s ease
+				&:hover
+					color: #767676
+					&:before
+						// display: block
+						visibility: visible
+						opacity: 1
+						width: 100%
+						left: 0
+						transform: translate(0, 0)
+			&.current-menu-item
+				a
+					color: #767676
+					&:before
+						// display: block
+						visibility: visible
+						opacity: 1
+						width: 100%
+						left: 0
+						transform: translate(0, 0)
+
+.headFixed
+	padding-top: 139px
+
+.mainHeader
+	&.fixed
+		position: fixed
+		top: 0
+		z-index: 10
+		width: 100%
+		&:after
+			display: none
+		&:before
+			height: 81px
+		.mainHeader_top
+			height: 41px
+		.mainHeader_top_logo
+			padding-top: 5px
+			img
+				width: 110px
+		.mainHeader_top_menu
+			padding-top: 9px
+		.mainHeader_bottom
+			height: 40px
+			padding: 10px 36px
+		.mainHeader_bottom_menu
+			ul
+				li
+					a
+						&:before
+							bottom: -22px
